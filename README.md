@@ -1,4 +1,4 @@
-# Digital-Signal-Processing--FIR-BAND-PASS-FILTER-DESIGN
+<img width="790" height="582" alt="image" src="https://github.com/user-attachments/assets/968ab112-b8bb-4bcd-b562-06e6c1c7148d" /># Digital-Signal-Processing--FIR-BAND-PASS-FILTER-DESIGN
 ## AIM:
 To generate design of Band Pass FIR digital filter using Window.
 ## Software Required:
@@ -28,21 +28,22 @@ Wc2=input('enter the value of Wc2=');
 N=input('enter the value of N='); 
 alpha=(N-1)/2;  
 eps=0.001;  
-%Band Stop Filter Coefficient 
+%Band Pass Filter Coefficient 
 n=0:1:N-1;  
-hd=(sin(Wc1*(n-alpha+eps))+sin(pi*(n-alpha+eps))-sin(Wc2*(n-alpha+eps)))./(pi*(n-alpha+eps))   
-%Bartlett Window Sequence  
+hd=(sin(Wc1*(n-alpha+eps))-sin(Wc2*(n-alpha+eps)*pi))./((n-alpha+eps)*pi)  
+%Hanning Window Sequence  
 n=0:1:N-1;  
-wh= 1-(2*abs(n-alpha)/N)
+wh=0.5-0.5*cos((2*pi*n)/(N-1))  
 hn=hd.*wh  
-% Plot the Band Pass Filter with Bartlett window Technique 
+% Plot the Low Pass Filter with Hanning Window Technique 
 w=0:0.01:pi;  
-h=freqz(hn,1,w); 
-plot(w/pi,abs(h),'blue');
+h=freqz(hn,1,w);  
+plot(w/pi,abs(h),'ms');
 ```
 ## OUTPUT:
-<img width="620" height="489" alt="image" src="https://github.com/user-attachments/assets/9f6791f5-e20f-4b99-a7d6-faaf7a4c5ac2" />
+<img width="790" height="582" alt="image" src="https://github.com/user-attachments/assets/d77c58a0-a56b-4b5a-85b8-6bec45904c53" />
+
 
 ## RESULT:
-![WhatsApp Image 2026-04-01 at 23 31 46](https://github.com/user-attachments/assets/e26e032c-85cf-4150-abdb-ec8942f46249)
+![WhatsApp Image 2026-04-01 at 23 33 43](https://github.com/user-attachments/assets/aedbd41b-688d-4846-82d4-42952349d180)
 
