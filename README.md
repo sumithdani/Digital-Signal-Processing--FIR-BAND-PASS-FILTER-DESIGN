@@ -1,4 +1,4 @@
-<img width="790" height="582" alt="image" src="https://github.com/user-attachments/assets/968ab112-b8bb-4bcd-b562-06e6c1c7148d" /># Digital-Signal-Processing--FIR-BAND-PASS-FILTER-DESIGN
+# Digital-Signal-Processing--FIR-BAND-PASS-FILTER-DESIGN
 ## AIM:
 To generate design of Band Pass FIR digital filter using Window.
 ## Software Required:
